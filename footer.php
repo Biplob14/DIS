@@ -2,7 +2,7 @@
 <footer class="page-footer footer"
 	style="position: fixed;
 		   left: 0;
-		   bottom: 0;
+		   bottom: 1;
 		   width: 100%;">
 		   
 	<div class="container">
