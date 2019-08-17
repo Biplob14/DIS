@@ -1,4 +1,6 @@
-<nav class="navbar navbar-inverse navbar-light" style="background-color:  #38006f;">
+<!-- navigation -->
+<div class="wrapper">
+<nav class="navbar navbar-inverse navbar-light" style="background-color:  #49494A;">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -23,7 +25,7 @@
         </li>
 
 
-        <li><a href="#">Doctors</a></li>
+        <li><a href="doc_list.php">Doctors</a></li>
         <li><a href="#">Hospitals</a></li>
 
       </ul>
@@ -31,9 +33,33 @@
 
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <div class="collapse navbar-collapse sticky-top">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign-Up<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="signup.php">User Sign-Up</a></li>
+            <li><a href="doctor_signup.php">Doctor Sign-Up</a></li>
+          </ul>
+        </li>
+
+
         <li><a href="login.php" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="admin/admin_index.php" ><span class=""></span> Admin</a></li>
+
+      </ul>
+    </div>
+  </div>
       </ul>
     </div>
   </div>
 </nav>
+</div>
+
+<style type="text/css">
+  .navbar{
+    /*overflow: hidden;*/
+    
+  }
+</style>

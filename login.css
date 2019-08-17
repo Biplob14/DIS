@@ -1,0 +1,70 @@
+
+body{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #fff;
+	background: url(doctor.jpg) no-repeat fixed center;
+
+	background-size: cover;
+}
+h2{
+	color: #00e68a;
+}
+.signin{
+	background: rgba(240, 255, 255, 0.7);;
+	padding: 40px;
+	width: 350px;
+	margin: auto;
+	margin-top: 80px;
+	height: 500px;
+	position: center;
+}
+form{
+	width: 240px;
+	text-align: center;
+}
+input{
+	width: 240px;
+	text-align: center;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+	font-family: 'Play', sans-serif;
+	font-size: 16px;
+	font-weight: 200px;
+	padding: 10px 0;
+	transition: border 0.5s;
+	outline: none;
+	color: #fff;
+}
+input[type=button]{
+	border: none;
+	width: 190px;
+	background: white;
+	color: #000;
+	font-size: 16px;
+	line-height: 25px;
+	padding: 10px;
+	border-radius: 15px;
+	cursor: pointer;
+	margin-top: 10px;
+	text-decoration: none;
+}
+.uname{
+	color: green;
+}
+.pass{
+	color: green;
+}
+.no_account{
+	color: #66a3ff;
+	padding-top: 100px;
+}
+.signup{
+	text-decoration: none;
+}
+
+.login{
+	text-decoration: none;
+}
+ style="margin-right: 0px; font-size: 13px; 
+ font-family: Tahoma, Geneva, Sans-serif;
