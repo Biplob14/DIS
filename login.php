@@ -10,11 +10,13 @@
 
 <body>
 	<div class="signin">
-		<form>
+		<form action="login_db.php" method="post" accept-charset="utf-8" role="form">
 			<h2>Log in</h2>
-			<input type="text" name="username" placeholder="Username" class="uname">
-			<input type="password" name="pass" placeholder="Password" class="pass">
-			<a href="" class="login"><input type="button" value="Log In"></a>
+
+			<input type="text" name="email" placeholder="Email" class="uname">
+			<input type="password" name="password" placeholder="Password" class="pass">
+			<button type="submit" value="Log In">Submit</button>
+
 			<br><br>
 			<div id="container">
 				<a href="#" style="text-decoration: none;">Forgot Password</a>
@@ -29,3 +31,4 @@
 </body>
 <?php include "footer.php" ?>
 </html>
+

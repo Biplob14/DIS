@@ -36,7 +36,7 @@ input{
 	outline: none;
 	color: #fff;
 }
-input[type=button]{
+button[type=submit]{
 	border: none;
 	width: 190px;
 	background: white;

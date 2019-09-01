@@ -18,15 +18,22 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Specialists<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Kidney & urology</a></li>
-            <li><a href="#">Heart</a></li>
+            <li><a href="#">Cardiology</a></li>
             <li><a href="#">Dermatology</a></li>
+            <li><a href="#">Endocrinology</a></li>
+            <li><a href="#">ENT</a></li>
+            <li><a href="#">General Physician</a></li>
+            <li><a href="#">Urology</a></li>
+            <li><a href="#">Psychiatry</a></li>
+            <li><a href="#">Pediatrics</a></li>
+            <li><a href="#">Oncology</a></li>
+
           </ul>
         </li>
 
 
         <li><a href="doc_list.php">Doctors</a></li>
-        <li><a href="#">Hospitals</a></li>
+        <li><a href="hospital_list.php">Hospitals</a></li>
 
       </ul>
 
