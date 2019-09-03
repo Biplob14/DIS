@@ -8,7 +8,7 @@ h1{
 	padding: 30px auto;
 	color: white;
 }
-img{
+.imgs{
 	border: 2px solid lightgray;
 	border-radius: 15px 50px 30px;
 	height: 150px;
@@ -20,7 +20,7 @@ img{
 	/*vertical-align: top;*/
 
 }
-img:hover{
+.imgs:hover{
 	background-color: darkgray;
 }
 .inner_content{

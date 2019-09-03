@@ -4,7 +4,7 @@
 <div class="container" id="wrap">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form action="user_signup_db.php" method="post" accept-charset="utf-8" class="form" role="form">   <legend>Sign Up</legend>
+            <form action="user_signup_db.php" method="POST" accept-charset="utf-8" class="form" role="form" enctype="multipart/form-data">   <legend>Sign Up</legend>
 
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
@@ -33,6 +33,15 @@
                         <input type="radio" name="gender" value="F" id=female />                        Female
                     </label>
                     <br />
+
+
+                        <input type="file" name="file" value="file">
+<!--                         <button type="submit" name="submit">Upload</button> -->
+
+
+
+
+
               <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
                     <button class="btn btn-lg btn-primary btn-block signup-btn" name="submit" type="submit">
                         Create my account</button>

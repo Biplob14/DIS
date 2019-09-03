@@ -45,7 +45,7 @@
           </div>
 
 	<div class="form-group">
-		<label for="title">Food Name</label>
+		<label for="title">Doctor Name</label>
 		<input type="text" class="form-control" name="food_name">
 	</div>
 
@@ -55,18 +55,18 @@
 	</div> -->
 
 	<div class="form-group">
-		<label for="title">Price</label>
+		<label for="title">Fees</label>
 		<input type="text" class="form-control" name="food_price">
 	</div>
 
 	<div class="form-group">
-		<label for="title">Food Image</label>
+		<label for="title">Doctor Image</label>
 		<input type="file" name="food_image">
 	</div>
 
 
 	<div class="form-group">
-		<label for="post_content">Offers</label>
+		<label for="post_content">Speciaty</label>
 		<textarea class="form-control" name="food_offer" id="" cols="30" rows="2"></textarea>
 	</div>
 

@@ -13,6 +13,7 @@ $last_name = $_POST['last_name'];
 $designation = $_POST['designation'];
 $specialty = $_POST['specialty'];
 $bmdc_reg_no = $_POST['bmdc_reg_no'];
+$hospital_name = $_POST['hospital_name'];
 $mobile_no = $_POST['mobile_no'];
 $password = $_POST['password'];
 $password_2 = $_POST['password_2'];
@@ -28,7 +29,7 @@ if(mysqli_num_rows($res_e) > 0){
   	  echo "Sorry... email already taken"; 	
   	}else{
   			$password = md5($password);
-           $insert = "INSERT INTO doc_signup (first_name, last_name, designation, specialty, bmdc_reg_no, mobile_no,email, password, gender, professional_statement ) VALUES ('$first_name','$last_name','$designation', '$specialty', '$bmdc_reg_no', '$mobile_no','$email', '$password','$gender', '$professional_statement')";
+           $insert = "INSERT INTO doc_signup (first_name, last_name, designation, specialty, bmdc_reg_no, hospital_name, mobile_no,email, password, gender, professional_statement ) VALUES ('$first_name','$last_name','$designation', '$specialty', '$bmdc_reg_no', '$hospital_name', '$mobile_no','$email', '$password','$gender', '$professional_statement')";
            $results = mysqli_query($db, $insert);
            var_dump($insert);
            if ($results) {

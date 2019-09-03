@@ -1,6 +1,8 @@
 
 <?php include "admin_header.php" ?>
 
+<?php ob_start(); ?>
+
 
     <div id="wrapper">
 
@@ -50,6 +52,7 @@
                         <th>Gender</th>
                         <th>Specialty</th>
                         <th>BMDC Regi No.</th>
+                        <th>Hospital</th>
                         <th>Contact</th>
                         
 
@@ -75,6 +78,7 @@
 						        $gender = $row['gender'];
 						        $specialty= $row['specialty'];
                                 $bmdc_reg_no= $row['bmdc_reg_no'];
+                                $hospital_name = $row['hospital_name'];
                                 $email= $row['email'];
                                 $mobile_no= $row['mobile_no'];
                                
@@ -89,14 +93,25 @@
                                 echo "<td>{$gender}</td>";
                                 echo "<td>{$specialty}</td>";
                                 echo "<td>{$bmdc_reg_no}</>";
+                                echo "<td>{$hospital_name}</td>";
 						        echo "<td>{$mobile_no}</br>{$email}</td>";
 						        // echo "<td>{$email}</td>";
 						        // echo "<td>{$rating}*</td>";
+
+                                echo"<td> <a href='doctor_data.php?delete={$r_id}'> Delete </a> </td>";
 						        echo "</tr>";
 
 						        $r_index++;
 
 						        }
+
+                                            if (isset($_GET['delete'])) {
+                                            $r_id= $_GET['delete'];
+                                            $query = "DELETE FROM doc_signup WHERE id ={$r_id}";
+                                            $delete_query = mysqli_query($db, $query);
+
+                                            header("Location:doctor_data.php");
+                                        }
 
 
 

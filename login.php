@@ -9,17 +9,38 @@
 </head>
 
 <body>
+	<div class="container">
 	<div class="signin">
 		<form action="login_db.php" method="post" accept-charset="utf-8" role="form">
 			<h2>Log in</h2>
 
 			<input type="text" name="email" placeholder="Email" class="uname">
 			<input type="password" name="password" placeholder="Password" class="pass">
-			<button type="submit" value="Log In">Submit</button>
+			<br><br>
+			<div >
+
+					<label class="radio-inline">
+					      <input type="radio" name="log_type" value="user">User
+					    </label><br>
+
+					    <label class="radio-inline">
+					      <input type="radio" name="log_type" value="doc">Doctor
+					    </label>
+
+            </div>
+
+
+
+
+
+
+
+
+			<button type="submit" value="login" name="submit">Submit</button>
 
 			<br><br>
 			<div id="container">
-				<a href="#" style="text-decoration: none;">Forgot Password</a>
+				<a href="#" style="text-decoration: none;">Forgot Password?</a>
 			</div>
 				<div class="no_account">Don't have account?</div>
 				&nbsp;
@@ -27,8 +48,20 @@
 		</form>
 
 	</div>
+	</div>
 
 </body>
+
+
+
+<style type="text/css">
+	.signin{
+		margin-bottom:  50px;
+	}
+</style>
+
+
+
 <?php include "footer.php" ?>
 </html>
 

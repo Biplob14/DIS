@@ -2,7 +2,7 @@
 
     <div class="container">
 
-    <form class="well form-horizontal" action="resource/signup/doc_signup_db.php" method="post" role="form"  id="contact_form">
+    <form class="well form-horizontal" action="doc_signup_db.php" method="post" role="form"  id="contact_form" enctype="multipart/form-data">
 <fieldset>
 
 <!-- Form Name -->
@@ -81,16 +81,28 @@
 </div>
   
   <!-- BMDC registration no. -->
-         <div class="form-group">
-  <label class="col-md-4 control-label">BMDC Registration No.</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-  <input name="bmdc_reg_no" placeholder="BMDC Registration No." class="form-control"  type="text" required>
-    </div>
-  </div>
-</div>
+        <div class="form-group">
+          <label class="col-md-4 control-label">BMDC Registration No.</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input name="bmdc_reg_no" placeholder="BMDC Registration No." class="form-control"  type="text" required>
+            </div>
+          </div>
+        </div>
 
+
+
+        <!-- hospital name -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Hospital Name</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input name="hospital_name" placeholder="Hospital You work in" class="form-control"  type="text" required>
+            </div>
+          </div>
+        </div>
 
 <!-- Text input-->
 
@@ -155,7 +167,7 @@
     <label class="col-md-4 control-label">Upload Image:</label>
       <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
-          <input type="file" class="custom-file-input" id="customFile" name="filename" />
+          <input type="file" class="custom-file-input" id="customFile" name="file" />
         </div>
       </div>
     

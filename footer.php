@@ -3,7 +3,8 @@
 		margin-top: 30px;
 	}
 </style>
-<footer class="page-footer footer"
+<div class="jumbotron">
+<footer class="page-footer foot"
 	style="/*position: fixed;*/
 		   left: 0;
 		   bottom: 1;
@@ -30,5 +31,6 @@
 	</div>
 	</div>
 </footer>
+</div>
 </body>
 </html>

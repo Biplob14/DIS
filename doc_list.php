@@ -1,5 +1,5 @@
-<?php include "db_connection.php" ?>
-<?php include "header.php" ?>
+
+<?php include_once "header.php" ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,95 +7,128 @@
 </head>
 	<body>
 		<h1>Doctor Information</h1>
-		<div class="menu">
-			
-		</div>
+
 		<div class="container">
-			<div class="content">
-				<div class="inner_content">
-					<div><img src="resource/dr_raihan.jpg" class="img1"></div> <!-- image-1 -->
-					<div class="info">Prof. Dr. Raihan Hussain 
-						<br>Professor,
-						<br>Department of Nuclear Medicine and Ultrasound
-						<br>National Institute of Nuclear Medicine and Allied Sciences, BAEC,
-						<br>BSMMU campus, Dhaka
-						<br><br>
-						<button type="button" class="btn btn-light"><a href="doc_appointment.php">Request Appointment</a></button>
-					</div>
-				</div>
-				<div class="inner_content">
-					<div><img src="resource/prof m_ali.jpg" class="img2"></div> <!-- image-2 -->
-					<div>Prof. Mohammad Ali
-						<br>Professor,
-						<br>Department of Hepatobiliary and Pancreatic Surgery & Liver Transplant
-						<br>BIRDEM General Hospital & Ibrahim Medical College, Dhaka
-						<br><br>
-						<button type="button" class="btn btn-light"><a href="doc_appointment.php">Request Appointment</a></button>
-					</div>
-				</div>
-				<div class="inner_content">
-					<div><img src="resource/doctor_kibria.jpg" class="img3"></div>
-					<div>Dr. S. M. G kibria
-						<br>Senior Consultant, General & Laparoscopic Surgery, 
-						<br>Labaid Specialized Hospital
-						<br>General Surgery (Incision, Operation)
-						<br>Labaid Specialized Hospital, Main Br. 
-						<br><br>
-						<button type="button" class="btn btn-light"><a href="doc_appointment.php">Request Appointment</a></button>
-					</div>
-				</div>
-				<div class="inner_content">
-					<div><img src="resource/Dr_Shahiduzzaman.jpg" class="img4"></div>
-					<div>Dr. GKM. Shahiduzzaman
-						<br>Associate Professor,
-						<br>Department of Medicine
-						<br>Shaheed Suhrawardy Medical College Hospital, Dhaka
-						<br><br>
-						<button type="button" class="btn btn-light"><a href="doc_appointment.php">Request Appointment</a></button>
-					</div>
-				</div>
-				<div class="inner_content">
-					<div><img src="resource/Dr_Chanchal_Kumar_Ghosh.jpg" class="img5"></div>
-					<div> Dr. Chanchal Kumar Ghosh
-						<br> MBBS,FCPS(Medicine),MD(Gastroenterology) Gastroenterology,
-						<br> Hepatology & Medicine specialist Interventional Gastroenterologist
-						<br><br>
-						<button type="button" class="btn btn-light"><a href="doc_appointment.php">Request Appointment</a></button>
-					</div>
-				</div>
-				<?php 
-					$query = "SELECT * FROM doc_signup";
-					$select_posts = mysqli_query($db,$query);
 
-					while ($row = mysqli_fetch_assoc($select_posts)){
-						$first_name = $row['first_name'];
-						$last_name = $row['last_name'];
-						$designation = $row['designation'];
-						$specialty = $row['specialty'];
-						$professional_statement = ['professional_statement'];
+					<div class="menu">
 
-					echo "
-						<div class='inner_content'>
-							<div><img src='resource/Dr_Chanchal_Kumar_Ghosh.jpg' class='img5'></div>
-							<div>{$first_name}  {$last_name}
-								<br> {$designation}
-								<br>{$specialty}
-								<br>{$professional_statement}
-								<br><br>
-								<button type='button' class='btn btn-light'><a href='doc_appointment.php'>Request Appointment</a></button>
-							</div>
-						</div>
-					";
-}
-				?>
-			</div>
-				
-			</div>
+
+
+                            <a>
+                            <form action="#" method="post">
+                            <select name="doc_specialty" >
+                              <option value="" style="">Specialists</option>
+                              <option value="cardiology">Cardiology</option>
+                              <option value="dermatology">Dermatology</option>
+                              <option value="endocrinology">Endocrinology</option>
+                              <option value="ent">ENT</option>
+                              <option value="general_physician">General Physician</option>
+                              <option value="urology">Urology</option>
+                              <option value="psychiatry">Psychiatry</option>
+                              <option value="pediatrics">Pediatrics</option>
+                              <option value="oncology">Oncology</option>
+                            </select>
+
+                            <button type="submit" name="submit" value="submit"> Search </button>
+
+
+                            </form>
+                          </a>
+
+                        
 			
-		</div>
+					</div>
 
 
 
+
+<div class="content">
+				<?php 
+					
+
+
+
+//specialty 
+
+				if (isset($_POST['submit'])) {
+
+
+					        		$doc_specialty=$_POST['doc_specialty'];
+
+
+					                $query = "SELECT * FROM doc_signup WHERE specialty= '$doc_specialty'";
+									$select_posts = mysqli_query($db,$query);
+
+										while ($row = mysqli_fetch_assoc($select_posts)){
+											$first_name = $row['first_name'];
+											$last_name = $row['last_name'];
+											$designation = $row['designation'];
+											$specialty = $row['specialty'];
+											$professional_statement = $row['professional_statement'];
+											$img=$row['profile_img'];
+
+
+										echo "
+											<div class='inner_content'>
+												<div><img src='$img' class='imgs'></div>
+												<div>{$first_name}  {$last_name}
+													<br> {$designation}
+													<br>{$specialty}
+													<br>{$professional_statement}
+													<br><br>
+													<button type='button' class='btn btn-light'><a href='doc_appointment.php'><b>Request Appointment</b></a></button>
+												</div>
+											</div>
+										";
+										}
+
+									}
+
+									else{
+
+											$query = "SELECT * FROM doc_signup";
+										$select_posts = mysqli_query($db,$query);
+
+										while ($row = mysqli_fetch_assoc($select_posts)){
+											$first_name = $row['first_name'];
+											$last_name = $row['last_name'];
+											$designation = $row['designation'];
+											$specialty = $row['specialty'];
+											$professional_statement = $row['professional_statement'];
+											$img=$row['profile_img'];
+
+										echo "
+											<div class='inner_content'>
+												<div><img src='$img' class='imgs'></div>
+												<div>{$first_name}  {$last_name}
+													<br> {$designation}
+													<br>{$specialty}
+													<br>{$professional_statement}
+													<br><br>
+													<button type='button' class='btn btn-light'><a href='doc_appointment.php'><b>Request Appointment</b></a></button>
+												</div>
+											</div>
+										";
+									}
+
+
+
+									}
+
+
+
+
+        ?>
+
+
+			</div>
+
+				
+</div>
+			
+
+
+			<br><br><br>
 	</body>
 
 

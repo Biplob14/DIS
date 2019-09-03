@@ -32,7 +32,7 @@
 
 
 
-<?php include_once "../server_connect.php";  ?>
+<?php include_once "../db_connection.php";  ?>
 
 
 <h3>Total User Count Table</h3>
@@ -42,7 +42,7 @@
                         <thead>
 
                         <th>Users</th>
-                        <th>Restaurants</th>  
+
 
 
                         </thead>
@@ -60,18 +60,12 @@
 
 
 
-                            // Restaurant Count
 
-                            $sql="SELECT count(id) AS total FROM r_signup";
-                            $result=mysqli_query($db,$sql);
-                            $values=mysqli_fetch_assoc($result);
-                            $r_count=$values['total'];
 
 
 
                                 echo "<tr>";
                                 echo "<td>{$user_count}</td>";
-                                echo "<td>{$r_count}</td>";
 
                                 echo "</tr>";
 
