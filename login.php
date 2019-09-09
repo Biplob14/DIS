@@ -17,14 +17,14 @@
 			<input type="text" name="email" placeholder="Email" class="uname">
 			<input type="password" name="password" placeholder="Password" class="pass">
 			<br><br>
-			<div >
+			<div class="rdo">
 
 					<label class="radio-inline">
-					      <input type="radio" name="log_type" value="user">User
+					      <label>User &nbsp&nbsp&nbsp</label><input type="radio" name="log_type" value="user">
 					    </label><br>
 
 					    <label class="radio-inline">
-					      <input type="radio" name="log_type" value="doc">Doctor
+					      <label>Doctor</label><input type="radio" name="log_type" value="doc">
 					    </label>
 
             </div>

@@ -9,6 +9,12 @@ body{
 h2{
 	color: #00e68a;
 }
+.rdo{
+	color: grey;
+	position: none;
+	text-align: left;
+	
+}
 .signin{
 	background: rgba(240, 255, 255, 0.7);;
 	padding: 40px;
